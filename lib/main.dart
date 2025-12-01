@@ -63,7 +63,7 @@ class _PrimeraPaginaState extends State<PrimeraPagina> {
   void initState() {
     super.initState();
 
-    // 🔥 Quan entrem a la pantalla, agafem la moto guardada al Provider
+    
     final provider = Provider.of<SelectedMotoProvider>(context, listen: false);
     dropdownValue = provider.selected;
   }
@@ -89,7 +89,7 @@ class _PrimeraPaginaState extends State<PrimeraPagina> {
               onChanged: (value) {
                 setState(() => dropdownValue = value!);
 
-                // 🔥 Actualitzem al provider perquè quedi guardat
+                
                 Provider.of<SelectedMotoProvider>(context, listen: false)
                     .setSelected(value!);
               },
